@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  {{ post.data.title }}
+  <p ng-hide="post.data.media === null">
+    <img ng-src="{{ post.data.media.oembed.thumbnail_url }}" alt="Post Photo" width=200></img>
+  </p>
+</div>
+<div class="panel" ng-repeat="c in comments">
+  <span>{{ c.data.ups - c.data.downs }}</span>
+  <span>{{ c.data.body }}</span>
+</div>
