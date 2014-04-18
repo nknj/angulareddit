@@ -10,7 +10,7 @@ First Angular app, woohoo.
 - View the top 15 posts in any subreddit
 - View the top 30-ish comments
 - Login using Reddit oAuth
-  - CORs bug still exits, jQuery hotfix not applied in the latest commit
+  - CORs bug still exists, jQuery hotfix not applied in the latest commit
   - Use `open -a Google\ Chrome --args --disable-web-security` as work around for now
 
 ## How?
@@ -26,10 +26,10 @@ grunt serve
 
 Url structure is the same as reddit:  
 
-- Subreddit: [http://127.0.0.1:9000/#/r/WTF](http://127.0.0.1:9000/r/WTF)
-- Comments: [http://127.0.0.1:9000/#/r/AskReddit/comments/2340xa/hackers_of_reddit_what_are_some_coolscary_things/](http://127.0.0.1:9000/r/AskReddit/comments/2340xa/hackers_of_reddit_what_are_some_coolscary_things/)
+- Subreddit: [http://127.0.0.1:9000/r/WTF](http://127.0.0.1:9000/r/WTF)
+- Comments: [http://127.0.0.1:9000/r/AskReddit/comments/2340xa/hackers_of_reddit_what_are_some_coolscary_things/](http://127.0.0.1:9000/r/AskReddit/comments/2340xa/hackers_of_reddit_what_are_some_coolscary_things/)
 
 ## Todo
 - Look into karma and add test cases
 - Better UI
-- complete oAuth implementation
+- Complete oAuth implementation
