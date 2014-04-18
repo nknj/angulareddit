@@ -1,6 +1,18 @@
+<div ng-show="oauthResponse === 'success'" class="alert alert-success alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  Reddit Authentication Successful!
+</div>
+
+<div ng-show="oauthResponse === 'error'" class="alert alert-danger alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <p>Reddit Aunthentication Unsuccessful :(</p>
+  <p>Error: {{ oauthResponseError }}</p>
+</div>
+
 <div class="jumbotron">
   <h1>Angulareddit</h1>
   <h3>{{ subreddit }}</h3>
+  <a class="btn-primary btn" ng-click="login()">Login with Reddit</a>
 </div>
 
 <div class="panel" ng-repeat="p in posts">
@@ -9,6 +21,6 @@
     <span class="title"><a href="{{ p.data.url | selfPostUrl }}">{{ p.data.title }}</a></span>
   </p>
   <p>
-    <a class="btn btn-primary btn-xs" href="#{{ p.data.permalink }}">Comments</a>
+    <a class="btn btn-primary btn-xs" href="{{ p.data.permalink }}">Comments</a>
   </p>
 </div>

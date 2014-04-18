@@ -8,7 +8,7 @@ var app = angular.module('angularedditApp', [
   'ngRoute'
 ]);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/subreddit.html',
@@ -22,9 +22,16 @@ app.config(function ($routeProvider) {
       templateUrl: 'views/post.html',
       controller: 'PostCtrl'
     })
+    .when('/oauth', {
+      templateUrl: 'views/oauth.html',
+      controller: 'oAuthCtrl'
+    })
     .otherwise({
       redirectTo: '/'
     });
+  // https://github.com/platanus/blog/blob/master/jekyll/_posts/
+  // 2013-04-01-using-grunt-and-angular-with-pushstate-support.md
+  $locationProvider.html5Mode(true);
 });
 
 app
